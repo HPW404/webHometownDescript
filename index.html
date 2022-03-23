@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/CDicon.jpg" type="image/jpg">
+    <title>欢迎来到成都! </title>
+    <script src="./js/axios.min.js"></script>
+    <script src="./js/vue2.2.2.min.js"></script>
+    <script src="./js/animateTB.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index/index-nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/index/index-grid.css">
+    <link rel="stylesheet" type="text/css" href="./css/index/index-inner.css">
+    <link rel="stylesheet" type="text/css" href="./css/index/index-content.css">
+</head>
+<body>
+<div id="app">
+
+    <div class="nav">
+        <div class="icon">
+            <img src="./img/CDicon.jpg" alt="成都图标" title="太阳神鸟图标">
+        </div>
+        <div class="greet">成都欢迎你</div>
+
+        <div class="shortcut">
+            <ul>
+                <li class="shortcut_btn"><a href="index.html">首页</a></li>
+                <li class="spacer"></li>
+                <li class="shortcut_btn"><a href="travel.html" target="_blank">旅游</a></li>
+                <li class="spacer"></li>
+                <li class="shortcut_btn"><a href="food.html" target="_blank">美食</a></li>
+                <li class="spacer"></li>
+                <li class="shortcut_btn"><a href="shopping.html" target="_blank">购物</a></li>
+                <li class="spacer"></li>
+                <li class="shortcut_btn"><a href="map.html" target="_blank">地图</a></li>
+            </ul>
+        </div>
+
+        <div class="user">
+            <img src="./img/yonghu.png" alt="用户头像" title="用户头像">
+        </div>
+    </div>
+    
+
+    <div class="grid">
+        <div class="inner">
+            <div class="inner-wrap">
+                <h1>成都历史简介</h1>
+                <p>
+                    成都历史悠久, 也是中国的古文化之都, 具有“天府之国”的美称。据史书记载, 大约在公元前5世纪中叶的古蜀国开明王朝九世时将都城从广都樊乡( 今双流县 )迁往成都, 构筑城池。关于成都一名的来历，据《太平环宇记》记载，是借用西周建都的历史经过，“以周太王从梁山止岐山，一年成邑，三年成都，因之名曰成都”。五代十国时，后蜀皇帝孟昶偏爱芙蓉花，命百姓在城墙上种植芙蓉树，花开时节，成都“四十里为锦绣”，故成都又被称为芙蓉城，简称“蓉城”
+                </p>
+                <p>
+                    成都是中国城址未变、延续至今最古老的城市之一, 仅次于江苏的苏州。成都是我国西南开发最早的地区, 是全国第一批历史文化名城之一。从有确切记载算起, 成都已有2300多年的历史。
+                </p>
+            </div>
+        </div>
+
+        <div class="slide-wrap">
+            <!-- <transition-group tag="ul" class="slide-ul" name="list">
+                <li v-for="(list, index) in slideList" :key="index" v-show="index===currentIndex" @mouseenter="stop" @mouseleave="go">
+                    <a :href="list.clickUrl" target="_blank">
+                        <img :src="list.image" :alt="list.desc" :title="list.desc">
+                    </a>
+                </li>
+            </transition-group> -->
+            <ul class="slide-ul">
+                <li v-for="(list, index) in slideList" :key="index" v-show="index===currentIndex" @mouseenter="stop" @mouseleave="go">
+                    <a :href="list.clickUrl" target="_blank">
+                        <img :src="list.image" :alt="list.desc" :title="list.desc">
+                    </a>
+                </li>
+            </ul>
+            <div class="change-slide">
+                <span v-for="(item, index) in slideList.length" :class="{'active':index===currentIndex}" @mouseover="change(index)"></span>
+            </div>
+        </div>
+
+        <div class="inner">
+            <div class="inner-wrap">
+                <h1>成都地理位置</h1>
+                <p>
+                    成都位于四川省中部，四川盆地西部，介于东经102°54′～104°53′和北纬30°05 ′～31°26′之间，全市东西长192公里，南北宽166公里，总面积14605平方公里，其中耕地面积648万亩。东北与德阳、东南与资阳毗邻，南面与眉山相连，西南与雅安、西北与阿坝州接壤。距东海1600公里，南海1090公里，属内陆地带
+                </p>
+                <p>
+                    位于川西北高原向四川盆地过渡的交接地带，具有自己特有的气候资源：一是东西两部分之间气候不同。二是冬湿冷、春早、无霜期较长，四季分明，热量丰富。三是冬春雨少，夏秋多雨，雨量充沛，而且降水的年际变化不大。四是光、热、水基本同季，气候资源的组合合理，很有利于生物繁衍。五是风速小，晴天少。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-title">
+        <p class="decoration-front"></p>
+        <p class="content-detail">详情介绍</p>
+        <a href="javascript:;" class="decoration-back">更多>></a>
+    </div>
+    <div class="content-list">
+        <div class="list-left">
+            <div class="list-left-wrapper">
+                <!-- <span v-for="(item, index) in detailHead" class="list-left-wrapper-item" @click="detailChange(index)">{{item}}</span> -->
+                <div class="list-left-wrapper-item">
+                    <span v-for="(value, index) in detailHead" :class="{'list-left-wrapper-item-click':index===detailCurrIndex}" @click="detailChange(index)">{{value}}</span>
+                </div>
+            </div>
+        </div>
+        <div class="list-item">
+            <div class="detail-wrapper" v-for="(values, index) in detailList" v-show="index===detailCurrIndex">
+                <div class="list-item-detail" v-for="value in values.headList">
+                    <img :src="value.imgUrl" alt="图片介绍" class="detailImg" :title="value.imgTitle">
+                    <div class="detailName">
+                        <span>{{ value.detailName }}</span>
+                    </div>
+                    <div class="address"> {{ value.addr }} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="to-top" v-show="pageYOffset > 200" @click="animateTB(window, 0)"></div>
+
+</div> <!-- 外层#app div -->
+
+    <!-- Vue代码 -->
+    <script src="./js/indexVue.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* 区块标题 */
+.content-title {
+    position: absolute;
+    top: 680px;
+    right: 145px;
+    background-color: #fff;
+    align-items: center;
+    width: 1226px;
+    padding: 5px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 2px rgb(0 0 0 / 20%);
+}
+
+.content-title::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 28px;
+    left: 35px;
+    border: 8px solid #000;
+    border-style: solid dashed dashed;
+    border-color: #fff transparent transparent;
+}
+
+.decoration-front {
+    float: left;
+    width: 3px;
+    height: 18px;
+    background-color: green;
+}
+
+.decoration-back {
+    float: right;
+    color: gray;
+    text-shadow: 2px 2px 2px gainsboro;
+    text-decoration: none;
+}
+
+.content-detail {
+    float: left;
+    padding-left: 8px;
+    flex: 1;
+    color: #000;
+}
+
+.content-list {
+    position: relative;
+    top: 710px;
+    margin: 10px auto;
+    width: 1226px;
+    height: 470px;
+}
+
+.content-list .list-left {
+    float: left;
+    border-radius: 10px;
+    margin-left: 10px;
+    width: 280px;
+    height: 450px;
+    background-color: #fff;
+}
+
+.list-left-wrapper {
+    margin: 160px auto;
+    text-align: center;
+    /* background-color: #fff; */
+}
+
+.list-left-wrapper-item span {
+    display: block;
+    margin-top: 12px;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.list-left-wrapper-item-click {
+    background-color: #f4f4f4;
+    color: #f00;
+}
+
+.content-list .list-item {
+    float: right;
+    width: 920px;
+    height: 450px;
+    /* background-color: #21a8fd; */
+}
+
+.content-list .list-item .detail-wrapper {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    width: 920px;
+    height: 450px;
+    /* background-color: #21a8fd; */
+    /* display: none; */
+}
+
+.content-list .list-item .detail-wrapper .list-item-detail {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    width: 293px;
+    height: 450px;
+    background-color: #fff;
+}
+
+.content-list .list-item .detail-wrapper .show {
+    display: block;
+}
+
+/* 详细信息 */
+.detailImg {
+    margin: 10px 6px;
+    width: 280px;
+    height: 280px;
+}
+
+.detailName span {
+    display: block;
+    margin: 12px 6px 0;
+    width: 280px;
+    height: 45px;
+    text-align: center;
+    color: #000;
+    line-height: 45px;
+    font-size: 25px;
+    border-bottom: 1px solid #000;
+    cursor: default;
+}
+
+.address {
+    margin-left: 6px;
+    margin-right: 6px;
+    width: 280px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 13px;
+}
