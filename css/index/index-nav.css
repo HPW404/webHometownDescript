@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* 导航栏 */
+.nav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #fff;
+}
+
+.nav .icon {
+    float: left;
+    width: 100px;
+    height: 70px;
+}
+
+.nav .greet {
+    float: left;
+    margin-left: 22px;
+    width: 130px;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 25px;
+}
+
+ul {
+    list-style: none;
+}
+
+.nav .shortcut {
+    margin: 0 auto;
+    width: 584px;
+    height: 70px;
+    /* background-color: #f2f2f2; */
+}
+
+.nav .shortcut li {
+    float: left;
+}
+
+.nav .shortcut li.shortcut_btn {
+    width: 100px;
+    height: 70px;
+    /* background-color: #f2f2f2; */
+    text-align: center;
+    line-height: 70px;
+}
+
+.nav .shortcut li.shortcut_btn a {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 10px;
+    width: 100px;
+    height: 70px;
+    text-decoration: none;
+    color: #000;
+    font-size: 25px;
+}
+
+.nav .shortcut li.shortcut_btn a:hover {
+    color: #f00;
+    background-color: #fff;
+}
+
+.nav .shortcut li.spacer {
+    overflow: hidden;
+    margin: 25px 0;
+    width: 1px;
+    height: 20px;
+    background-color: #999;
+}
+
+.nav .user {
+    position: absolute;
+    right: 132px;
+    top: 10px;
+    width: 154px;
+    height: 44px;
+}
+
+.nav .user .username {
+    float: right;
+    width: 100px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+}
+
+.to-top {
+    position: fixed; 
+    top: 600px; 
+    right: 40px;
+    width: 80px;
+    height: 80px;
+    background: url(../../img/toTop.jpg) no-repeat;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer;
+}

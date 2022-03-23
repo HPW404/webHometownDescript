@@ -1,0 +1,8 @@
+.forum {
+    border: 1px solid #21a8fd; 
+    border-radius: 10px; 
+    background-color: #494A5F; 
+    color: #000;
+    margin: 100px; 
+    padding: 15px;
+}
